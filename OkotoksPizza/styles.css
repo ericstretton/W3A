@@ -1,15 +1,78 @@
-/*DESCENDANT SELECTOR*/
-section p{color: goldenrod;
+html{background-color: aqua;}
+
+.Grid{height: 200vh;
+        width: 80%;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto 1fr auto;
+        grid-template-areas: 
+        'header'
+        'main'
+        'footer'
+        'div';
 }
 
-/*CHILD SELECTOR + ACTIVE*/
-section>img:active{height: 25em;}
+.Grid > header{
+    position:fixed;
+    width: 100vw;
+    height: 15vh;
+    z-index: 20;
+    top: 0%;
+    left: 0%;
+}
+
+.Grid > main {
+    position: relative;
+    top: 10vh;
+    height: 50vh;
+    left: 5%;
+}
+
+.Grid > div {
+    position:relative;
+    top: 20vh;
+}
+
+.Grid > h2 {
+    position:relative;
+    top: 15vh;
+}
+
+.Grid > footer{
+    position:fixed;
+    bottom: 0%;
+    width: 100vw;
+}
+
+main > img {
+    height: 40vh;
+}
+
+article p{color: goldenrod;
+    position: relative;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    border: solid;
+    border-color: black;
+    padding: 10px;
+}
+
+article>h1{
+    position:relative;
+    top: 10vh;
+    left: 15vh;
+    font-size: 1.5em;
+}
+
+article>img:active{
+    height: 25em;
+}
 
 
-/*ADJACENT SELECTOR + HOVER*/
+
 #footer + img,a:hover{font-size: 1.25em}
 
-/*Make an argument to make more efficient? Otherwise VISITED*/
+
 
 #MenuBar_Home a:visited{color: chartreuse;}
 
@@ -26,4 +89,4 @@ footer{background-color: rgb(43, 117, 228) ;}
 footer > a:visited{color: chartreuse;}
 
 
-html{background-color: aqua;}
+
