@@ -1,6 +1,13 @@
 html{background-color: aqua;}
 
-.Grid{height: 200vh;
+
+@keyframes click{
+    0%{font-size: 20px;}
+    50%{font-size: 15px;}
+    100%{font-size: 20px;}
+    
+}
+.Grid{height: 350vh;
         width: 80%;
         display: grid;
         grid-template-columns: 1fr;
@@ -21,10 +28,13 @@ html{background-color: aqua;}
     left: 0%;
 }
 
+
+
 .Grid > main {
     position: relative;
     top: 10vh;
     height: 50vh;
+    width: 50vw;
     left: 5%;
 }
 
@@ -41,11 +51,15 @@ html{background-color: aqua;}
 .Grid > footer{
     position:fixed;
     bottom: 0%;
+    left: 0;
     width: 100vw;
 }
 
 main > img {
-    height: 40vh;
+    width: 15vw;
+    transition-timing-function: linear;
+    transition-property: left top;
+    transition-duration: 0.5s;
 }
 
 article p{color: goldenrod;
@@ -55,6 +69,15 @@ article p{color: goldenrod;
     border: solid;
     border-color: black;
     padding: 10px;
+    transition-property: all;
+    transition-duration: 1s;
+    transition-timing-function: ease-in;
+
+}
+
+article p:hover{
+    background-color: black;
+   
 }
 
 article>h1{
@@ -64,13 +87,23 @@ article>h1{
     font-size: 1.5em;
 }
 
-article>img:active{
-    height: 25em;
+main>img:active{
+    width: 25em;
+    left: 50%;
+    top: 05%;
+    position: absolute;
 }
 
 
 
 #footer + img,a:hover{font-size: 1.25em}
+
+#header + img, a:active{
+    animation-name: click;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    
+}
 
 
 
@@ -89,4 +122,10 @@ footer{background-color: rgb(43, 117, 228) ;}
 footer > a:visited{color: chartreuse;}
 
 
+header > img{
+    width: 30px;
+}
 
+footer > img{
+    width: 30px;
+}
