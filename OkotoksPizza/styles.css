@@ -1,42 +1,180 @@
-html{background-color: aqua;}
+*{
+    margin: 0;
+    padding: 0;
+}
 
+body{
+    background-color: #D2D0BA}
 
+    h2{position: relative;
+        top: 18vh;
+        left: 35%;
+        color: #3E2A35;
+    }
 @keyframes click{
     0%{font-size: 20px;}
     50%{font-size: 15px;}
     100%{font-size: 20px;}
     
 }
-.Grid{height: 350vh;
-        width: 80%;
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: auto 1fr auto;
-        grid-template-areas: 
-        'header'
-        'main'
-        'footer'
-        'div';
+section{height: 150vh;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas: 
+    'header'
+    'main'
+    'footer'
+    'div';  
+}
+article p{
+    transition-property: all;
+    transition-duration: 1s;
+    transition-timing-function: ease-in;
+
 }
 
-.Grid > header{
-    position:fixed;
-    width: 100vw;
-    height: 15vh;
-    z-index: 20;
-    top: 0%;
+    header{background-color: #00989B;
+        position: fixed;
+        z-index: 20;
+        width: 100%;
+        top: 0%;
+        color: #3E2A35;
+        ;
+       
+    }
+
+    footer{background-color: #00989B;
+    position: fixed;
+    bottom: 0%;
     left: 0%;
+    width: 100%;
+    height: 7%;}
+
+header a,img,h1{position:relative;
+    left: 30%;
+    display:block;
+    width: 30px;
+    margin-bottom: 5px;
+    margin-right: 5px;
+
+}
+
+footer a,h3{
+    display: block;
+    position:relative;
+    left:30%;
+    
+    }
+
+ p{margin-top: 150px;
+    position: relative;
+    
+    color: #3E2A35;
+    font-size: small;
+    border: 2px solid black;
+    width: 80%;
+    padding-left: 12.5%;
+    padding-right: 15%;
+   
+    
+}
+
+iframe{
+    width: 95%;
+    margin-left: 2%;
 }
 
 
+p:hover{
+    background-color: #E5C1BD;
+    font-size: 1.5em;
+    padding-left:14%;
+   
+}
 
-.Grid > main {
+ h4{
+    margin-top: 50px;
+    margin-left: 150px;
+}
+
+main > img {
+    width: 15vw;
+    transition-timing-function: linear;
+    transition-property: left top;
+    transition-duration: 0.5s;
+}
+
+main>img:active{
+    width: 25em;
+    left: 15%;
+    top: 20%;
+    position: absolute;
+    z-index: 30;
+}
+#footer + img,a:hover{font-size: 1.25em}
+
+#MenuBar_Gallery + img, a:active{
+    animation-name: click;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    
+    
+}
+#MenuBar_Home + img, a:active{
+    animation-name: click;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    
+    
+}
+#MenuBar_Contact + img, a:active{
+    animation-name: click;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    
+    
+}
+#MenuBar_Home a:visited{color: chartreuse;}
+
+#MenuBar_Contact a:visited{color: chartreuse;}
+
+#MenuBar_Gallery a:visited{color: chartreuse;}
+
+a:link{color: rgb(240, 16, 184);}
+
+footer > a:visited{color: chartreuse;}
+
+@media screen and(min-width: 600px){
+    section > #MenuBar_Home >a,img,h1{
+       left:0%;
+       position: absolute;
+       display: grid;
+       grid-template-columns: 1fr 1fr 1fr 1fr ;
+       
+      
+   }
+   #video h4{
+       position: relative;
+    left: 35vw;
+    width: 100vw;
+
+}
+}   
+
+
+@media screen and (min-width: 1000px){ 
+    
+.Grid>main {
     position: relative;
     top: 10vh;
     height: 50vh;
     width: 50vw;
     left: 5%;
 }
+
+
 
 .Grid > div {
     position:relative;
@@ -48,37 +186,29 @@ html{background-color: aqua;}
     top: 15vh;
 }
 
-.Grid > footer{
-    position:fixed;
+.Grid > footer a,img,h3{
     bottom: 0%;
     left: 0;
     width: 100vw;
+    display: inline-block;
+    vertical-align: middle;
+    
 }
 
-main > img {
-    width: 15vw;
-    transition-timing-function: linear;
-    transition-property: left top;
-    transition-duration: 0.5s;
+.Grid > header a,img,h1{
+    display: inline-block;
+    margin-left: 25px;
+    
 }
 
-article p{color: goldenrod;
+#content > article {
     position: relative;
-    margin-top: 100px;
-    margin-bottom: 100px;
-    border: solid;
-    border-color: black;
-    padding: 10px;
-    transition-property: all;
-    transition-duration: 1s;
-    transition-timing-function: ease-in;
-
+    left: 20%;
+    top: 0%;
+    margin: 0;
 }
 
-article p:hover{
-    background-color: black;
-   
-}
+
 
 article>h1{
     position:relative;
@@ -86,46 +216,32 @@ article>h1{
     left: 15vh;
     font-size: 1.5em;
 }
-
-main>img:active{
-    width: 25em;
-    left: 50%;
-    top: 05%;
-    position: absolute;
+footer > img{
+    width: 30px;
 }
-
-
-
-#footer + img,a:hover{font-size: 1.25em}
-
-#header + img, a:active{
-    animation-name: click;
-    animation-duration: 1s;
-    animation-timing-function: ease-in-out;
-    
-}
-
-
-
-#MenuBar_Home a:visited{color: chartreuse;}
-
-#MenuBar_Contact a:visited{color: chartreuse;}
-
-#MenuBar_Gallery a:visited{color: chartreuse;}
-
-header{background-color: rgb(43, 117, 228);}
-
-a:link{color: rgb(240, 16, 184);}
-
-footer{background-color: rgb(43, 117, 228) ;}
-
-footer > a:visited{color: chartreuse;}
-
 
 header > img{
     width: 30px;
 }
-
-footer > img{
-    width: 30px;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+footer{background-color: rgb#00989B;}
+
+
+
+
+
+
