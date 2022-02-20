@@ -1,0 +1,41 @@
+@import '_variables';
+
+header{
+    background-color: #00989B;
+    position: sticky;
+    display: grid;
+    grid-template-columns: repeat (3 1fr);
+    z-index: 20;
+    width: 100%;
+    color: $font_color;
+}
+
+#MenuBar a:active{
+    @include active_MenuBar_link;
+    
+}
+
+footer{background-color: #00989B;
+    position: fixed;
+    bottom: 0%;
+    left: 0%;
+    width: 100%;
+    height: 7%;}
+
+footer a h3{
+    display: block;
+    position:relative;
+    left:30%;
+        
+        }
+
+#footer  a:hover{font-size: 1.25em}
+
+@media screen and(min-width: 600px){
+    #MenuBar a p1{
+       
+       position: relative;
+      
+       text-align: center;
+    }
+}

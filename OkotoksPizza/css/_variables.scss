@@ -1,0 +1,8 @@
+$font_color: #3E2A35;
+
+
+@mixin active_MenuBar_link  {
+    animation-name: click;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;   
+}
